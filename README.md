@@ -2,6 +2,11 @@
 
 No more too verbose constraint! Write it like a flow!
 
+[![Build Status](https://travis-ci.org/muizidn/flowconstraint.svg?branch=master)](https://travis-ci.org/muizidn/flowconstraint)
+[![codecov](https://codecov.io/gh/muizidn/flowconstraint/branch/master/graph/badge.svg)](https://codecov.io/gh/muizidn/flowconstraint)
+![GitHub top language](https://img.shields.io/github/languages/top/muizidn/flowconstraint.svg?color=orange)
+![Cocoapods](https://img.shields.io/cocoapods/v/flowconstraint.svg?color=red)
+
 This simple library mainly designed to tackle repetitive and too verbose code when simply setup constraint. Many 3rd party library already put syntactic sugar to build constraint but still, some will end up in repetitive and verbose enough code. Unless you make a hack of it.
 
 ## Comparison

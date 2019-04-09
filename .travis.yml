@@ -1,0 +1,34 @@
+language: objective-c
+osx_image: xcode10.2
+gemfile: Gemfile
+
+branches:
+  only:
+    - master
+
+cache:
+  - bundler
+  - cocoapods
+
+notifications:
+  email:
+   - muiz.idn@gmail.com
+
+env:
+  - ACTION=test DESTINATION='platform=iOS Simulator,name=iPhone 5s,OS=latest'
+
+script:
+  - xcodebuild -workspace FlowConstraint.xcworkspace -scheme FlowConstraint $ACTION -sdk iphonesimulator -destination "$DESTINATION" | xcpretty --color
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+  - gem install jazzy
+  - make documentation
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  local-dir: docs
+  on:
+    branch: master
