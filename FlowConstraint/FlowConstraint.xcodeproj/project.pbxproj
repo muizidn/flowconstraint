@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF07A3AE225C220E004531EB /* Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3AD225C220E004531EB /* Relation.swift */; };
+		EF07A3ED225C335A004531EB /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3EC225C335A004531EB /* Padding.swift */; };
+		EF07A3EF225C3AD0004531EB /* Flow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3EE225C3AD0004531EB /* Flow+Attributes.swift */; };
+		EF07A3F1225C3ADB004531EB /* Flow+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3F0225C3ADB004531EB /* Flow+Constraints.swift */; };
+		EF07A3F3225C3AF5004531EB /* Flow+TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3F2225C3AF5004531EB /* Flow+TargetView.swift */; };
+		EF07A3F6225C3B19004531EB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3F5225C3B19004531EB /* UIView+Extension.swift */; };
 		EF8A3D9D2254F35300EACB5F /* FlowConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8A3D932254F35300EACB5F /* FlowConstraint.framework */; };
 		EF8A3DA22254F35300EACB5F /* FlowConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8A3DA12254F35300EACB5F /* FlowConstraintTests.swift */; };
 		EF8A3DA42254F35300EACB5F /* FlowConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8A3D962254F35300EACB5F /* FlowConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFF8C388225B7BF700487A01 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8C387225B7BF700487A01 /* Flow.swift */; };
+		EFF8C38A225B7F2C00487A01 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8C389225B7F2C00487A01 /* ConstraintItem.swift */; };
+		EFF8C394225B83BD00487A01 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8C393225B83BD00487A01 /* Constraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +32,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF07A3AD225C220E004531EB /* Relation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relation.swift; sourceTree = "<group>"; };
+		EF07A3EC225C335A004531EB /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		EF07A3EE225C3AD0004531EB /* Flow+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Attributes.swift"; sourceTree = "<group>"; };
+		EF07A3F0225C3ADB004531EB /* Flow+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Constraints.swift"; sourceTree = "<group>"; };
+		EF07A3F2225C3AF5004531EB /* Flow+TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+TargetView.swift"; sourceTree = "<group>"; };
+		EF07A3F5225C3B19004531EB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EF8A3D932254F35300EACB5F /* FlowConstraint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlowConstraint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8A3D962254F35300EACB5F /* FlowConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowConstraint.h; sourceTree = "<group>"; };
 		EF8A3D972254F35300EACB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF8A3D9C2254F35300EACB5F /* FlowConstraintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowConstraintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8A3DA12254F35300EACB5F /* FlowConstraintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConstraintTests.swift; sourceTree = "<group>"; };
 		EF8A3DA32254F35300EACB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFF8C387225B7BF700487A01 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		EFF8C389225B7F2C00487A01 /* ConstraintItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
+		EFF8C393225B83BD00487A01 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF07A3F4225C3B02004531EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF07A3EE225C3AD0004531EB /* Flow+Attributes.swift */,
+				EF07A3F0225C3ADB004531EB /* Flow+Constraints.swift */,
+				EF07A3F2225C3AF5004531EB /* Flow+TargetView.swift */,
+				EF07A3F5225C3B19004531EB /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EF8A3D892254F35200EACB5F = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +100,8 @@
 		EF8A3D952254F35300EACB5F /* FlowConstraint */ = {
 			isa = PBXGroup;
 			children = (
+				EF07A3F4225C3B02004531EB /* Extensions */,
+				EFF8C386225B7BE600487A01 /* Classes */,
 				EF8A3D962254F35300EACB5F /* FlowConstraint.h */,
 				EF8A3D972254F35300EACB5F /* Info.plist */,
 			);
@@ -84,6 +115,18 @@
 				EF8A3DA32254F35300EACB5F /* Info.plist */,
 			);
 			path = FlowConstraintTests;
+			sourceTree = "<group>";
+		};
+		EFF8C386225B7BE600487A01 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EFF8C387225B7BF700487A01 /* Flow.swift */,
+				EFF8C389225B7F2C00487A01 /* ConstraintItem.swift */,
+				EF07A3EC225C335A004531EB /* Padding.swift */,
+				EF07A3AD225C220E004531EB /* Relation.swift */,
+				EFF8C393225B83BD00487A01 /* Constraint.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +191,11 @@
 				TargetAttributes = {
 					EF8A3D922254F35200EACB5F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					EF8A3D9B2254F35300EACB5F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -194,6 +239,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF8C394225B83BD00487A01 /* Constraint.swift in Sources */,
+				EF07A3ED225C335A004531EB /* Padding.swift in Sources */,
+				EF07A3AE225C220E004531EB /* Relation.swift in Sources */,
+				EF07A3F6225C3B19004531EB /* UIView+Extension.swift in Sources */,
+				EF07A3F1225C3ADB004531EB /* Flow+Constraints.swift in Sources */,
+				EFF8C38A225B7F2C00487A01 /* ConstraintItem.swift in Sources */,
+				EF07A3F3225C3AF5004531EB /* Flow+TargetView.swift in Sources */,
+				EF07A3EF225C3AD0004531EB /* Flow+Attributes.swift in Sources */,
+				EFF8C388225B7BF700487A01 /* Flow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +395,7 @@
 		EF8A3DA82254F35300EACB5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,7 +413,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokit.FlowConstraint;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -366,6 +422,7 @@
 		EF8A3DA92254F35300EACB5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -383,7 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokit.FlowConstraint;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -391,6 +448,7 @@
 		EF8A3DAB2254F35300EACB5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7J25C59XU;
 				INFOPLIST_FILE = FlowConstraintTests/Info.plist;
@@ -401,7 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokit.FlowConstraintTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -409,6 +467,7 @@
 		EF8A3DAC2254F35300EACB5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P7J25C59XU;
 				INFOPLIST_FILE = FlowConstraintTests/Info.plist;
@@ -419,7 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokit.FlowConstraintTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

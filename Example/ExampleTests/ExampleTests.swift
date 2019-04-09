@@ -1,15 +1,15 @@
 //
-//  FlowConstraintTests.swift
-//  FlowConstraintTests
+//  ExampleTests.swift
+//  ExampleTests
 //
-//  Created by PondokIOS on 03/04/19.
-//  Copyright © 2019 PondokIT. All rights reserved.
+//  Created by pondokios on 09/04/2019.
+//  Copyright © 2019 pondokios. All rights reserved.
 //
 
 import XCTest
-@testable import FlowConstraint
+@testable import Example
 
-class FlowConstraintTests: XCTestCase {
+class ExampleTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,7 +20,8 @@ class FlowConstraintTests: XCTestCase {
     }
 
     func testExample() {
-        UIView().flow.left().right().top().bottom().toSuperview()
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
     func testPerformanceExample() {
