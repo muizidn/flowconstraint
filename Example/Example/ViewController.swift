@@ -15,40 +15,40 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let s = UIScrollView()
+        s.backgroundColor = .blue
+        
         let r = UIView()
         r.backgroundColor = .red
         
         let y = UIView()
         y.backgroundColor = .yellow
         
-        view.addSubview(r)
-        view.addSubview(y)
+        view.addSubview(s)
+        s.addSubview(r)
+        r.addSubview(y)
+        
+        s.flow()
+            .edges()
+            .withSuperview()
         
         r.flow()
             .top()
             .bottom()
-            .left()
-            .right()
-            .attribute(constant: .offset(20), exclude: [.right, .bottom])
-            .attribute(constant: .inset(20), for: [.right])
-            .attribute(constant: .inset(200), for: [.bottom])
-            .withSuperview()
-        
-        y.flow()
-            .top(.bottom)
-            .attribute(constant: .offset(20))
-            .withView(r)
-
-            .left()
-            .attribute(constant: .offset(20))
+            .centerX()
             .withSuperview()
             
-            .bottom()
-            .right()
-            .attribute(constant: .inset(20))
+            .width()
+            .attribute(constant: -20)
+            .withSuperview()
+            
+            .height(.notAnAttribute)
+            .attribute(constant: 900)
+            .withSelf()
+        
+        y.flow()
+            .edges(20)
             .withSuperview()
     }
-    
-    
 }
 

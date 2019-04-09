@@ -46,7 +46,21 @@ extension Constraint: Hashable {
 
 extension Constraint {
     func build(view1: UIView, view2: UIView, attributes: Attributes) {
-        let constraint = NSLayoutConstraint(item: view1, attribute: item, relatedBy: attributes.relation, toItem: view2, attribute: attributes.targetItem, multiplier: attributes.multiplier, constant: attributes.constant)
+        let _view2: UIView?
+        if case .notAnAttribute = attributes.targetItem {
+            _view2 = nil
+        } else {
+            _view2 = view2
+        }
+        let constraint = NSLayoutConstraint(
+            item: view1,
+            attribute: item,
+            relatedBy: attributes.relation,
+            toItem: _view2,
+            attribute: attributes.targetItem,
+            multiplier: attributes.multiplier,
+            constant: attributes.constant
+        )
         constraint.isActive = true
     }
 }

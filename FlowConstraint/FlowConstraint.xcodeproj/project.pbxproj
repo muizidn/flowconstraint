@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EF07A3AE225C220E004531EB /* Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3AD225C220E004531EB /* Relation.swift */; };
-		EF07A3ED225C335A004531EB /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3EC225C335A004531EB /* Padding.swift */; };
 		EF07A3EF225C3AD0004531EB /* Flow+Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3EE225C3AD0004531EB /* Flow+Attributes.swift */; };
 		EF07A3F1225C3ADB004531EB /* Flow+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3F0225C3ADB004531EB /* Flow+Constraints.swift */; };
 		EF07A3F3225C3AF5004531EB /* Flow+TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF07A3F2225C3AF5004531EB /* Flow+TargetView.swift */; };
@@ -33,7 +32,6 @@
 
 /* Begin PBXFileReference section */
 		EF07A3AD225C220E004531EB /* Relation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relation.swift; sourceTree = "<group>"; };
-		EF07A3EC225C335A004531EB /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
 		EF07A3EE225C3AD0004531EB /* Flow+Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Attributes.swift"; sourceTree = "<group>"; };
 		EF07A3F0225C3ADB004531EB /* Flow+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+Constraints.swift"; sourceTree = "<group>"; };
 		EF07A3F2225C3AF5004531EB /* Flow+TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flow+TargetView.swift"; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			children = (
 				EFF8C387225B7BF700487A01 /* Flow.swift */,
 				EFF8C389225B7F2C00487A01 /* ConstraintItem.swift */,
-				EF07A3EC225C335A004531EB /* Padding.swift */,
 				EF07A3AD225C220E004531EB /* Relation.swift */,
 				EFF8C393225B83BD00487A01 /* Constraint.swift */,
 			);
@@ -240,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFF8C394225B83BD00487A01 /* Constraint.swift in Sources */,
-				EF07A3ED225C335A004531EB /* Padding.swift in Sources */,
 				EF07A3AE225C220E004531EB /* Relation.swift in Sources */,
 				EF07A3F6225C3B19004531EB /* UIView+Extension.swift in Sources */,
 				EF07A3F1225C3ADB004531EB /* Flow+Constraints.swift in Sources */,
@@ -493,7 +489,7 @@
 				EF8A3DA62254F35300EACB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		EF8A3DA72254F35300EACB5F /* Build configuration list for PBXNativeTarget "FlowConstraint" */ = {
 			isa = XCConfigurationList;
@@ -502,7 +498,7 @@
 				EF8A3DA92254F35300EACB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		EF8A3DAA2254F35300EACB5F /* Build configuration list for PBXNativeTarget "FlowConstraintTests" */ = {
 			isa = XCConfigurationList;
@@ -511,7 +507,7 @@
 				EF8A3DAC2254F35300EACB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

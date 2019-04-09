@@ -51,4 +51,10 @@ public extension Flow {
         apply(with: view, constraints: [item: value])
         return self
     }
+    
+    @discardableResult
+    func withSelf() -> Flow {
+        apply(with: view, constraints: constraints)
+        return self
+    }
 }

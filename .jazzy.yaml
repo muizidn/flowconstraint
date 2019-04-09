@@ -1,0 +1,6 @@
+author: muiz.idn@gmail.com
+xcodebuild_arguments:
+    - "-project"
+    - "./FlowConstraint/FlowConstraint.xcodeproj"
+    - "-scheme"
+    - "FlowConstraint"

@@ -128,3 +128,36 @@ public extension Flow {
         return set(.centerYWithinMargins, targetItem)
     }
 }
+
+public extension Flow {
+    /// Width == Height
+    func size(_ size: CGFloat) -> Flow {
+        return width(.notAnAttribute)
+            .height(.notAnAttribute)
+            .attribute(constant: size)
+    }
+    
+    /// Width, Height == ConstraintItem
+    func size(_ item: ConstraintItem) -> Flow {
+        return width(item)
+            .height(item)
+    }
+    
+    /// CenterX, CenterY
+    func center() -> Flow {
+        return centerX().centerY()
+    }
+    
+    /// Left, Top (constant) and Right, Bottom (-constant) with Superview
+    func edges(_ constant: CGFloat = 0) -> Flow {
+        return left()
+            .top()
+            .attribute(constant: constant)
+            .withSuperview()
+            
+            .right()
+            .bottom()
+            .attribute(constant: -constant)
+            .withSuperview()
+    }
+}

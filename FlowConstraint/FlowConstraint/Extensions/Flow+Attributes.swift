@@ -32,11 +32,11 @@ public extension Flow {
     ///   - multiplier: Multiplier value
     ///   - constant: Padding case instance
     /// - Returns: Receiver
-    func attributes(relation: Relation, multiplier: CGFloat, constant: Padding) -> Flow {
+    func attributes(relation: Relation, multiplier: CGFloat, constant: CGFloat) -> Flow {
         return attributes(completion: {
             $0.relation = relation
             $0.multiplier = multiplier
-            $0.constant = constant.constant
+            $0.constant = constant
         })
     }
     
@@ -65,14 +65,14 @@ public extension Flow {
     }
     
     /// Constant with Padding except excluded ConstraintItems
-    func attribute(constant padding: Padding , exclude items: [ConstraintItem] = []) -> Flow {
-        filtered(exclude: items).forEach({ $0.value.constant = padding.constant })
+    func attribute(constant: CGFloat , exclude items: [ConstraintItem] = []) -> Flow {
+        filtered(exclude: items).forEach({ $0.value.constant = constant })
         return self
     }
     
     /// Constant with Padding for ConstraintItems
-    func attribute(constant padding: Padding , for items: [ConstraintItem]) -> Flow {
-        filtered(for: items).forEach({ $0.value.constant = padding.constant })
+    func attribute(constant: CGFloat, for items: [ConstraintItem]) -> Flow {
+        filtered(for: items).forEach({ $0.value.constant = constant })
         return self
     }
 }
