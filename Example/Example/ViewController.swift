@@ -36,18 +36,15 @@ class ViewController: UIViewController {
             .top()
             .bottom()
             .centerX()
-            .withSuperview()
-            
             .width()
-            .attribute(constant: -20)
+            .constant(.height, constant: 900)
             .withSuperview()
-            
-            .height(.notAnAttribute)
-            .attribute(constant: 900)
-            .withSelf()
         
         y.flow()
-            .edges(20)
+            .width(.height)
+            .withSelf()
+            .constant(.height, constant: 40)
+            .center()
             .withSuperview()
     }
 }

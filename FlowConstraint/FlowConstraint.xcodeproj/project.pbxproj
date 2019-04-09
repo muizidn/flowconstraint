@@ -489,7 +489,7 @@
 				EF8A3DA62254F35300EACB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		EF8A3DA72254F35300EACB5F /* Build configuration list for PBXNativeTarget "FlowConstraint" */ = {
 			isa = XCConfigurationList;
@@ -498,7 +498,7 @@
 				EF8A3DA92254F35300EACB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		EF8A3DAA2254F35300EACB5F /* Build configuration list for PBXNativeTarget "FlowConstraintTests" */ = {
 			isa = XCConfigurationList;
@@ -507,7 +507,7 @@
 				EF8A3DAC2254F35300EACB5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
