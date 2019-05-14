@@ -20,7 +20,7 @@ class FlowConstraintTests: XCTestCase {
     }
 
     func testExample() {
-        UIView().flow.left().right().top().bottom().toSuperview()
+        
     }
 
     func testPerformanceExample() {
