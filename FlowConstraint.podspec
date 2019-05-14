@@ -16,6 +16,6 @@ Avoid verbose Autolayout. Build it in convenient way.
   spec.swift_version = "4.2"
 
   spec.source        = { :git => "https://github.com/muizidn/flowconstraint.git", :tag => "#{spec.version}" }
-  spec.source_files  = "ViewDSL/**/*.{h,m,swift}"
+  spec.source_files  = "FlowConstraint/**/*.{h,m,swift}"
 
 end
