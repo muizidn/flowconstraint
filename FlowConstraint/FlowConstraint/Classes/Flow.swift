@@ -25,5 +25,9 @@ public class Flow {
         return constraints.filter({ items.contains($0.key) })
     }
     
-    deinit {}
+    deinit {
+        #if DEBUG
+        print("Deinitialize Flow \(self)")
+        #endif
+    }
 }

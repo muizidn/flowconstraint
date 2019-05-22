@@ -12,7 +12,7 @@ public extension Flow {
     
     private func apply(with view: UIView, constraints: [ConstraintItem: Constraint.Attributes]) {
         self.view.translatesAutoresizingMaskIntoConstraints = false
-        constraints.forEach { (item, attributes) in
+        constraints.forEach { [unowned self](item, attributes) in
             let constraint = Constraint(item: item)
             constraint.build(
                 view1: self.view,
@@ -33,7 +33,7 @@ public extension Flow {
             fatalError("View has no superview")
         }
         withView(superview)
-        return self
+        return Flow(view: view)
     }
     
     @discardableResult
@@ -42,19 +42,19 @@ public extension Flow {
             with: view,
             constraints: filtered(exclude: items)
         )
-        return self
+        return Flow(view: view)
     }
     
     @discardableResult
     func withView(_ view: UIView, for item: ConstraintItem) -> Flow {
         let value = constraints[item] ?? Constraint.Attributes(targetItem: item)
         apply(with: view, constraints: [item: value])
-        return self
+        return Flow(view: view)
     }
     
     @discardableResult
     func withSelf() -> Flow {
         apply(with: view, constraints: constraints)
-        return self
+        return Flow(view: view)
     }
 }
