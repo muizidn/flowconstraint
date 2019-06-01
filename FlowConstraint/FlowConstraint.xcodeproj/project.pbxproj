@@ -15,6 +15,7 @@
 		EF8A3D9D2254F35300EACB5F /* FlowConstraint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8A3D932254F35300EACB5F /* FlowConstraint.framework */; };
 		EF8A3DA22254F35300EACB5F /* FlowConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8A3DA12254F35300EACB5F /* FlowConstraintTests.swift */; };
 		EF8A3DA42254F35300EACB5F /* FlowConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = EF8A3D962254F35300EACB5F /* FlowConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF924F5422A245B30065AD44 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF924F5322A245B30065AD44 /* CoreGraphics.framework */; };
 		EFF8C388225B7BF700487A01 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8C387225B7BF700487A01 /* Flow.swift */; };
 		EFF8C38A225B7F2C00487A01 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8C389225B7F2C00487A01 /* ConstraintItem.swift */; };
 		EFF8C394225B83BD00487A01 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8C393225B83BD00487A01 /* Constraint.swift */; };
@@ -42,6 +43,7 @@
 		EF8A3D9C2254F35300EACB5F /* FlowConstraintTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowConstraintTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8A3DA12254F35300EACB5F /* FlowConstraintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowConstraintTests.swift; sourceTree = "<group>"; };
 		EF8A3DA32254F35300EACB5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF924F5322A245B30065AD44 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EFF8C387225B7BF700487A01 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		EFF8C389225B7F2C00487A01 /* ConstraintItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
 		EFF8C393225B83BD00487A01 /* Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF924F5422A245B30065AD44 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				EF8A3D952254F35300EACB5F /* FlowConstraint */,
 				EF8A3DA02254F35300EACB5F /* FlowConstraintTests */,
 				EF8A3D942254F35300EACB5F /* Products */,
+				EF924F5222A245B30065AD44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +117,14 @@
 				EF8A3DA32254F35300EACB5F /* Info.plist */,
 			);
 			path = FlowConstraintTests;
+			sourceTree = "<group>";
+		};
+		EF924F5222A245B30065AD44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF924F5322A245B30065AD44 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EFF8C386225B7BE600487A01 /* Classes */ = {
@@ -410,7 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -436,7 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pondokit.FlowConstraint;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
