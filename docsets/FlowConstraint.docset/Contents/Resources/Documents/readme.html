@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>README  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="README  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          FlowConstraint Docs
+        </a>
+         (58% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">FlowConstraint Reference</a>
+      <img class="carat" src="img/carat.png" />
+      README  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Constraint.html">Constraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Constraint/Attributes.html">– Attributes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Flow.html">Flow</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:14FlowConstraint0B4Itema">ConstraintItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:14FlowConstraint8Relationa">Relation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <h1 id='flow-constraint' class='heading'>Flow Constraint</h1>
+
+<p>No more too verbose constraint! Write it like a flow!</p>
+
+<p><a href="https://travis-ci.org/muizidn/flowconstraint"><img src="https://travis-ci.org/muizidn/flowconstraint.svg?branch=master" alt="Build Status"></a>
+<a href="https://codecov.io/gh/muizidn/flowconstraint"><img src="https://codecov.io/gh/muizidn/flowconstraint/branch/master/graph/badge.svg" alt="codecov"></a>
+<img src="https://img.shields.io/github/languages/top/muizidn/flowconstraint.svg?color=orange" alt="GitHub top language">
+<img src="https://img.shields.io/cocoapods/v/flowconstraint.svg?color=red" alt="Cocoapods"></p>
+
+<p>This simple library mainly designed to tackle repetitive and too verbose code when simply setup constraint. Many 3rd party library already put syntactic sugar to build constraint but still, some will end up in repetitive and verbose enough code. Unless you make a hack of it.</p>
+<h2 id='comparison' class='heading'>Comparison</h2>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">red</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">yellow</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">()</span>
+
+<span class="n">red</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">yellow</span><span class="p">)</span>
+</code></pre>
+<h4 id='nslayoutconstraint' class='heading'>NSLayoutConstraint</h4>
+<pre class="highlight swift"><code><span class="c1">// a must set property</span>
+<span class="n">yellow</span><span class="o">.</span><span class="n">translatesAutoresizingMaskIntoConstraints</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="k">let</span> <span class="nv">constraint</span> <span class="o">=</span> <span class="kt">NSLayoutConstraint</span><span class="p">(</span>
+    <span class="nv">item</span><span class="p">:</span> <span class="n">yellow</span><span class="p">,</span>
+    <span class="nv">attribute</span><span class="p">:</span> <span class="o">.</span><span class="n">left</span><span class="p">,</span>
+    <span class="nv">relatedBy</span><span class="p">:</span> <span class="o">.</span><span class="n">equal</span><span class="p">,</span>
+    <span class="nv">toItem</span><span class="p">:</span> <span class="n">red</span><span class="p">,</span>
+    <span class="nv">attribute</span><span class="p">:</span> <span class="o">.</span><span class="n">left</span><span class="p">,</span>
+    <span class="nv">multiplier</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nv">constant</span><span class="p">:</span> <span class="mi">20</span>
+<span class="p">)</span>
+<span class="n">constraint</span><span class="o">.</span><span class="n">isActive</span> <span class="o">=</span> <span class="kc">true</span>
+</code></pre>
+<h4 id='nslayoutanchor' class='heading'>NSLayoutAnchor</h4>
+<pre class="highlight swift"><code><span class="c1">// a must set property</span>
+<span class="n">yellow</span><span class="o">.</span><span class="n">translatesAutoresizingMaskIntoConstraints</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="k">let</span> <span class="nv">constraint</span> <span class="o">=</span> <span class="n">yellow</span><span class="o">.</span><span class="n">leftAnchor</span><span class="o">.</span><span class="nf">constraint</span><span class="p">(</span><span class="nv">equalTo</span><span class="p">:</span> <span class="n">red</span><span class="o">.</span><span class="n">leftAnchor</span><span class="p">,</span> <span class="nv">constant</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">constraint</span><span class="o">.</span><span class="n">isActive</span> <span class="o">=</span> <span class="kc">true</span>
+</code></pre>
+
+<p>If you want to set <strong>yellow</strong> edges to <strong>red</strong> edges only, you will need a lot of code, and those are repetitive task, you want to get rid of it! If you don&rsquo;t, I do 😄!</p>
+<h4 id='flow-constraint' class='heading'>Flow Constraint</h4>
+<pre class="highlight swift"><code><span class="n">yellow</span><span class="o">.</span><span class="nf">flow</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">left</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+</code></pre>
+
+<p>Let&rsquo;s split up the steps to build a constraint.</p>
+
+<ol>
+<li><p>Create Flow instance to govern how do you create your constraint.</p>
+
+<blockquote>
+<p>class <code><a href="Classes/Flow.html">Flow</a></code> is designed to handle all <code>dirty</code> interfaces to build you layout.</p>
+</blockquote></li>
+<li><p>Constraint setup.
+There are three groups of methods available</p>
+
+<ul>
+<li><p>Constraint</p>
+
+<blockquote>
+<p>Interfaces to govern your Constraint</p>
+</blockquote>
+
+<p>example :
+    a. left()
+    b. top(.bottom)</p></li>
+</ul></li>
+</ol>
+<pre class="highlight plaintext"><code>- Attribute
+    &gt; Interface to set Constraint.Attribute
+
+    example :
+        a. attribute(constant: -20)
+        b. attribute(relation: .equal)
+
+- TargetView
+    &gt; Interface to finalize Constraint setup
+
+    example :
+        a. withSuperview()
+        b. withSelf()
+</code></pre>
+
+<p><strong>Constraint</strong> and <strong>Attribute</strong> interfaces will need to be finalized. Every invocation will return current Flow instance which the method not marked as <code>@discardableResult</code>. This is correct. Since before any invocation of <strong>TargetView</strong> interface, all declared constraint not implemented using NSLayoutConstraint under the hood yet.</p>
+
+<p>NOTE: Any invocation of <strong>TargetView</strong> interface <strong>will have side-effect</strong>. Invocation of <strong>TargetView</strong> is supposed to be happen after all constraint match and fixed. It will enumerate all constraint definition inside Flow instance to <em>implement using **NSLayoutConstraint</em>* under the hood and then remove it after*. So you can get empty and cleaned up Flow instance after any invocation of <strong>TargetView</strong> interface to define other constraint.</p>
+<h4 id='example' class='heading'>Example</h4>
+
+<p>Typically, to build edge constraint you will declare in this form in another library or using NSLayoutAnchor. This will be written in FlowConstraint equivalent.</p>
+<pre class="highlight swift"><code><span class="n">yellow</span><span class="o">.</span><span class="nf">flow</span><span class="p">()</span><span class="o">.</span><span class="nf">left</span><span class="p">()</span><span class="o">.</span><span class="nf">atrribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+<span class="n">yellow</span><span class="o">.</span><span class="nf">flow</span><span class="p">()</span><span class="o">.</span><span class="nf">top</span><span class="p">()</span><span class="o">.</span><span class="nf">atrribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+<span class="n">yellow</span><span class="o">.</span><span class="nf">flow</span><span class="p">()</span><span class="o">.</span><span class="nf">right</span><span class="p">()</span><span class="o">.</span><span class="nf">atrribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+<span class="n">yellow</span><span class="o">.</span><span class="nf">flow</span><span class="p">()</span><span class="o">.</span><span class="nf">bottom</span><span class="p">()</span><span class="o">.</span><span class="nf">atrribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">)</span><span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+</code></pre>
+
+<p>You see that <code>flow()</code>, <code>attribute(constant:)</code>, <code>withSuperview()</code> is repetitively called. It&rsquo;s too verbose though it may make the code more clear 😃. I don&rsquo;t like it.</p>
+
+<p>Some library provide helper method with <code>edges</code> like <code>SnapKit</code> to avoid this code. But most of them will make it harder to declare constant attribute to each constraint. What if you want to make <code>bottom</code> to 200 instead of -20.</p>
+
+<p>This if you want to make it in FlowConstraint</p>
+<pre class="highlight swift"><code><span class="n">yellow</span><span class="o">.</span><span class="nf">flow</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">left</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">top</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">attribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+    <span class="c1">// It's okay to add line spacing. Swift is powerfull!</span>
+    <span class="o">.</span><span class="nf">right</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">bottom</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">attribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+</code></pre>
+
+<p>Or</p>
+<pre class="highlight swift"><code><span class="n">yellow</span><span class="o">.</span><span class="nf">flow</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">left</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">top</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">right</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">bottom</span><span class="p">()</span>
+    <span class="o">.</span><span class="nf">attribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="o">.</span><span class="n">top</span><span class="p">])</span>
+    <span class="o">.</span><span class="nf">attribute</span><span class="p">(</span><span class="nv">constant</span><span class="p">:</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="o">.</span><span class="n">bottom</span><span class="p">])</span>
+    <span class="o">.</span><span class="nf">withSuperview</span><span class="p">()</span>
+</code></pre>
+
+<p>Ahh, sure FlowConstraint has been provided <code>edges</code> for you. Just check it!</p>
+<h2 id='cocoapod' class='heading'>CocoaPod</h2>
+
+<p>Not yet ready!</p>
+<h2 id='contribute' class='heading'>Contribute</h2>
+
+<p>Please make your Pull Request. I&rsquo;ll happy to review!</p>
+<h2 id='other-libraries' class='heading'>Other Libraries</h2>
+
+<ul>
+<li><a href="http://github.com/muizidn/viewdsl">ViewDSL</a> Combine DSL with FlowConstraint! Beautiful!</li>
+<li><a href="http://github.com/muizidn/eventclosure">EventClosure</a> No more #selector on you UIControl.Event handling. Use closure!</li>
+</ul>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2019 <a class="link" href="https://github.com/muizidn/flowconstraint" target="_blank" rel="external">muiz.idn@gmail.com</a>. All rights reserved. (Last updated: 2019-06-01)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
